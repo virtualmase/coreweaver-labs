@@ -6,7 +6,8 @@ export const metadata = {
   description: 'Pioneering innovative solutions for a decentralized future',
 };
 
-export default function RootLayout({ children }) {
+// Define the type for the props, specifying that children is of type React.ReactNode
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body>{children}</body>
