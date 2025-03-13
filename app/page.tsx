@@ -42,21 +42,21 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-center mb-12">Our Innovations</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-gray-800 p-6 rounded-lg hover:shadow-lg transition">
-              <h3 className="text-xl font-semibold text-blue-400">CoreStake</h3>
+              <h3 className="text-xl font-semibold text-blue-400">WeaveStake</h3>
               <p className="mt-2 text-gray-300">
-                Stake your assets seamlessly with our advanced platform.
+                Stake your assets to support our decentralized AI network.
               </p>
             </div>
             <div className="bg-gray-800 p-6 rounded-lg hover:shadow-lg transition">
-              <h3 className="text-xl font-semibold text-blue-400">CoreNet</h3>
+              <h3 className="text-xl font-semibold text-blue-400">WeaveNet</h3>
               <p className="mt-2 text-gray-300">
-                Decentralized networking for secure, scalable systems.
+                A decentralized network for secure AI data sharing.
               </p>
             </div>
             <div className="bg-gray-800 p-6 rounded-lg hover:shadow-lg transition">
-              <h3 className="text-xl font-semibold text-blue-400">CoreCompute</h3>
+              <h3 className="text-xl font-semibold text-blue-400">WeaveCompute</h3>
               <p className="mt-2 text-gray-300">
-                Harness distributed computing for powerful applications.
+                Distributed computing power for AI workloads.
               </p>
             </div>
           </div>
