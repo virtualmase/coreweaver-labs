@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coreweaver Labs: Serverless Trust. Decentralized AI.</title>
+    <meta name="description" content="Coreweaver Labs pioneers the fusion of advanced AI, neuromorphic computing, and precision optics to deliver intelligent systems that perceive, think, and act in real time—responsibly and efficiently. Experience Serverless Trust and Decentralized AI.">
+    <meta name="keywords" content="Coreweaver Labs, AI innovation, neuromorphic computing, advanced optics, TERR9, HORUS Research, LUX-OPUS, ATHENAX, responsible AI, edge computing, LiDAR, serverless AI, decentralized AI, NPU, generative AI, AI ethics">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Futura:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Fonts (for example, Futura for headings if available, otherwise Inter is fallback) */
+        h1, h2, h3, h4 {
+            font-family: 'Futura', 'Inter', sans-serif;
+            font-weight: 700;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0c1d; /* Very dark blue-purple, near black */
+            color: #e0e7ff; /* Light blue-gray for text */
+        }
+        .text-neon-blue { color: #00e0ff; }
+        .text-neon-purple { color: #a667ff; }
+        .text-neon-green { color: #39ff14; }
+
+        .btn-primary {
+            background-color: #a667ff; /* Neon Purple */
+            color: #0d0c1d; /* Dark background color */
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #00e0ff; /* Neon Blue */
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 224, 255, 0.4);
+        }
+        .btn-secondary {
+            border: 2px solid #00e0ff; /* Neon Blue */
+            color: #00e0ff;
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background-color: #00e0ff;
+            color: #0d0c1d;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 224, 255, 0.4);
+        }
+        .card-bg {
+            background-color: #1a1a2e; /* Slightly lighter dark blue */
+            border: 1px solid #2e2e4a; /* Subtle border */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-bg:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 224, 255, 0.2);
+        }
+        /* Gradient text for headlines */
+        .gradient-text {
+            background: linear-gradient(90deg, #00e0ff, #a667ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent; /* Fallback for browsers not supporting background-clip: text */
+        }
+
+        /* Responsive menu specific styles */
+        #mobile-menu {
+            transition: max-height 0.3s ease-out;
+            overflow: hidden;
+            max-height: 0;
+        }
+        #mobile-menu.open {
+            max-height: 500px; /* Adjust based on content height */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="min-h-screen flex flex-col">
+        <!-- Navigation Bar -->
+        <nav class="bg-black bg-opacity-70 backdrop-blur-md p-4 sticky top-0 z-50 shadow-lg border-b border-gray-800">
+            <div class="container mx-auto flex justify-between items-center">
+                <a href="#hero" class="text-3xl font-extrabold text-neon-blue">Coreweaver Labs</a>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden text-neon-blue focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="#hero" class="text-gray-300 hover:text-neon-blue transition duration-300 font-medium">Home</a></li>
+                    <li><a href="#terr9" class="text-gray-300 hover:text-neon-blue transition duration-300 font-medium">TERR9</a></li>
+                    <li><a href="#horus-research" class="text-gray-300 hover:text-neon-blue transition duration-300 font-medium">HORUS Research</a></li>
+                    <li><a href="#lux-opus" class="text-gray-300 hover:text-neon-blue transition duration-300 font-medium">LUX-OPUS</a></li>
+                    <li><a href="#athenax" class="text-gray-300 hover:text-neon-blue transition duration-300 font-medium">ATHENAX</a></li>
+                    <li><a href="#about" class="text-gray-300 hover:text-neon-blue transition duration-300 font-medium">About</a></li>
+                    <li><a href="#contact" class="text-gray-300 hover:text-neon-blue transition duration-300 font-medium">Contact</a></li>
+                    <li><a href="#blog" class="text-gray-300 hover:text-neon-blue transition duration-300 font-medium">Blog</a></li>
+                    <li><a href="#careers" class="text-gray-300 hover:text-neon-blue transition duration-300 font-medium">Careers</a></li>
+                </ul>
+            </div>
+             <!-- Mobile Menu Content -->
+            <div id="mobile-menu" class="md:hidden mt-4 bg-gray-900 rounded-lg shadow-xl">
+                <ul class="flex flex-col items-center py-4 space-y-3">
+                    <li><a href="#hero" class="block text-gray-300 hover:text-neon-blue transition duration-300 font-medium py-2">Home</a></li>
+                    <li><a href="#terr9" class="block text-gray-300 hover:text-neon-blue transition duration-300 font-medium py-2">TERR9</a></li>
+                    <li><a href="#horus-research" class="block text-gray-300 hover:text-neon-blue transition duration-300 font-medium py-2">HORUS Research</a></li>
+                    <li><a href="#lux-opus" class="block text-gray-300 hover:text-neon-blue transition duration-300 font-medium py-2">LUX-OPUS</a></li>
+                    <li><a href="#athenax" class="block text-gray-300 hover:text-neon-blue transition duration-300 font-medium py-2">ATHENAX</a></li>
+                    <li><a href="#about" class="block text-gray-300 hover:text-neon-blue transition duration-300 font-medium py-2">About</a></li>
+                    <li><a href="#contact" class="block text-gray-300 hover:text-neon-blue transition duration-300 font-medium py-2">Contact</a></li>
+                    <li><a href="#blog" class="block text-gray-300 hover:text-neon-blue transition duration-300 font-medium py-2">Blog</a></li>
+                    <li><a href="#careers" class="block text-gray-300 hover:text-neon-blue transition duration-300 font-medium py-2">Careers</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="flex-1">
+            <!-- Hero Section -->
+            <section id="hero" class="relative h-screen flex items-center justify-center text-center bg-gradient-to-br from-gray-900 to-indigo-950 overflow-hidden">
+                <div class="absolute inset-0 z-0 opacity-20">
+                    <!-- Placeholder for 3D animation / neural network visual -->
+                    <img src="https://placehold.co/1920x1080/1a1a2e/00e0ff?text=3D+Neural+Network+Animation" alt="Abstract neural network animation" class="w-full h-full object-cover">
+                </div>
+                <div class="relative z-10 p-4 md:p-8 max-w-5xl mx-auto">
+                    <h1 class="text-5xl md:text-7xl font-extrabold mb-4 leading-tight gradient-text">Serverless Trust. Decentralized AI.</h1>
+                    <p class="text-xl md:text-3xl text-gray-300 mb-8 leading-relaxed font-light">Run inference and training on decentralized, serverless cloud with real-time observability.</p>
+                    <p class="text-xl md:text-2xl text-neon-green mb-10 font-bold italic">Coreweaver Labs: Weaving Intelligence into the Future</p>
+                    <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                        <a href="#solutions" class="btn-primary px-8 py-3 rounded-full text-lg font-bold shadow-lg hover:shadow-neon-purple">Explore Our Solutions</a>
+                        <a href="#contact" class="btn-secondary px-8 py-3 rounded-full text-lg font-bold shadow-lg hover:shadow-neon-blue">Contact Us</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mission Statement -->
+            <section id="mission" class="py-16 bg-gray-900 text-center px-4">
+                <div class="container mx-auto max-w-4xl">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 gradient-text">Our Mission</h2>
+                    <p class="text-lg md:text-xl text-gray-300 leading-relaxed italic">Coreweaver Labs researches intelligence trends and develops solutions that optimize efficiency and security.</p>
+                </div>
+            </section>
+
+            <!-- Featured Projects Section -->
+            <section id="solutions" class="py-16 bg-gradient-to-b from-gray-950 to-indigo-900 px-4">
+                <div class="container mx-auto">
+                    <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Our Cutting-Edge Solutions</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <!-- TERR9 Card -->
+                        <div class="card-bg p-6 rounded-xl shadow-lg flex flex-col items-center text-center">
+                            <img src="https://placehold.co/150x100/39ff14/0d0c1d?text=TERR9" alt="TERR9 Logo Placeholder" class="mb-4 rounded-lg">
+                            <h3 class="text-2xl font-semibold text-neon-green mb-2">TERR9</h3>
+                            <p class="text-gray-300 text-sm mb-4">Responsible AI optimized for Neural Processing Units (NPUs) within decentralized networks, ensuring high performance with Serverless Trust.</p>
+                            <a href="#terr9" class="text-neon-green hover:underline font-semibold mt-auto">Learn More &rarr;</a>
+                        </div>
+                        <!-- HORUS Research Card -->
+                        <div class="card-bg p-6 rounded-xl shadow-lg flex flex-col items-center text-center">
+                            <img src="https://placehold.co/150x100/a667ff/0d0c1d?text=HORUS" alt="HORUS Research Logo Placeholder" class="mb-4 rounded-lg">
+                            <h3 class="text-2xl font-semibold text-neon-purple mb-2">HORUS Research</h3>
+                            <p class="text-gray-300 text-sm mb-4">Data science and AI ethics insights to build responsible, trustworthy, and decentralized AI systems.</p>
+                            <a href="#horus-research" class="text-neon-purple hover:underline font-semibold mt-auto">Learn More &rarr;</a>
+                        </div>
+                        <!-- LUX-OPUS Card -->
+                        <div class="card-bg p-6 rounded-xl shadow-lg flex flex-col items-center text-center">
+                            <img src="https://placehold.co/150x100/00e0ff/0d0c1d?text=LUX-OPUS" alt="LUX-OPUS Logo Placeholder" class="mb-4 rounded-lg">
+                            <h3 class="text-2xl font-semibold text-neon-blue mb-2">LUX-OPUS</h3>
+                            <p class="text-gray-300 text-sm mb-4">Advanced LiDAR illumination technology for unmatched clarity in challenging environments, enhancing decentralized perception.</p>
+                            <a href="#lux-opus" class="text-neon-blue hover:underline font-semibold mt-auto">Learn More &rarr;</a>
+                        </div>
+                        <!-- ATHENAX Card -->
+                        <div class="card-bg p-6 rounded-xl shadow-lg flex flex-col items-center text-center">
+                            <img src="https://placehold.co/150x100/ff7c43/0d0c1d?text=ATHENAX" alt="ATHENAX Logo Placeholder" class="mb-4 rounded-lg">
+                            <h3 class="text-2xl font-semibold text-accent-orange mb-2">ATHENAX</h3>
+                            <p class="text-gray-300 text-sm mb-4">Neuromorphic intelligence platform transforming LiDAR streams into instant, autonomous decisions at the edge, fostering decentralized AI operations.</p>
+                            <a href="#athenax" class="text-accent-orange hover:underline font-semibold mt-auto">Learn More &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why Coreweaver Section -->
+            <section id="why-coreweaver" class="py-16 bg-gray-900 px-4">
+                <div class="container mx-auto text-center max-w-4xl">
+                    <h2 class="text-4xl font-bold mb-8 gradient-text">Why Choose Coreweaver Labs?</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                        <div class="p-6 rounded-lg card-bg">
+                            <h3 class="text-xl font-semibold text-neon-green mb-3">Responsible AI First</h3>
+                            <p class="text-gray-300 text-sm">Our AI solutions are built with ethical frameworks at their core, ensuring fairness, transparency, and accountability, powered by insights from HORUS Research for Serverless Trust.</p>
+                        </div>
+                        <div class="p-6 rounded-lg card-bg">
+                            <h3 class="text-xl font-semibold text-neon-blue mb-3">Edge Computing & Decentralized Inference</h3>
+                            <p class="text-gray-300 text-sm">We enable real-time decision-making where it matters most, integrating AI capabilities directly into edge devices and leveraging decentralized cloud for enhanced efficiency and resilience.</p>
+                        </div>
+                        <div class="p-6 rounded-lg card-bg">
+                            <h3 class="text-xl font-semibold text-neon-purple mb-3">Proprietary Optics & Perception</h3>
+                            <p class="text-gray-300 text-sm">Our LUX-OPUS technology provides unparalleled environmental perception, cutting through noise to deliver precise data for intelligent systems.</p>
+                        </div>
+                        <div class="p-6 rounded-lg card-bg">
+                            <h3 class="text-xl font-semibold text-neon-green mb-3">Self-Improving AI Systems</h3>
+                            <p class="text-gray-300 text-sm">Our platforms learn and adapt from real-world feedback, continuously refining performance and ensuring long-term reliability and scale within a decentralized ecosystem.</p>
+                        </div>
+                    </div>
+                    <div class="mt-12">
+                        <a href="#contact" class="btn-primary px-8 py-3 rounded-full text-lg font-bold shadow-lg hover:shadow-neon-purple">Request a Demo</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TERR9 Page Section -->
+            <section id="terr9" class="py-16 bg-indigo-950 px-4">
+                <div class="container mx-auto max-w-4xl text-center">
+                    <h2 class="text-4xl font-bold mb-6 gradient-text">TERR9: Powering Responsible AI at Scale</h2>
+                    <div class="relative w-full h-64 md:h-96 bg-gray-800 rounded-xl shadow-xl mb-8 flex items-center justify-center overflow-hidden">
+                        <!-- Placeholder for Animated neural network or NPU chip -->
+                        <img src="https://placehold.co/800x400/22223b/39ff14?text=Animated+Neural+Network+or+NPU+Chip" alt="Animated neural network or NPU chip" class="w-full h-full object-cover opacity-70">
+                    </div>
+                    <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+                        TERR9 accelerates the deployment of powerful AI, optimized for efficiency and performance on advanced computing architectures like Neural Processing Units (NPUs). Our mission is to empower industries with intelligent systems that are ethical, scalable, and real-time capable, all within a decentralized, serverless cloud environment.
+                    </p>
+                    <h3 class="text-2xl font-semibold text-neon-green mb-4">Key Features</h3>
+                    <ul class="list-disc list-inside text-gray-300 text-left mx-auto max-w-2xl space-y-2 mb-8">
+                        <li><span class="font-bold text-neon-blue">Optimized AI for NPUs:</span> High performance, low latency inference and training on decentralized hardware.</li>
+                        <li><span class="font-bold text-neon-green">Ethical AI Frameworks:</span> Built on HORUS Research insights, ensuring responsible AI deployment with Serverless Trust.</li>
+                        <li><span class="font-bold text-neon-purple">Scalable Decentralized Deployment:</span> From edge devices to enterprise systems, leveraging a robust, serverless cloud.</li>
+                    </ul>
+                    <h3 class="text-2xl font-semibold text-neon-green mb-4">Use Cases</h3>
+                    <ul class="list-disc list-inside text-gray-300 text-left mx-auto max-w-2xl space-y-2 mb-10">
+                        <li>Autonomous drones for inspection and delivery on decentralized networks.</li>
+                        <li>Smart infrastructure management with real-time, edge-based AI.</li>
+                        <li>Industrial automation systems with secure, verifiable AI operations.</li>
+                    </ul>
+                    <a href="#contact" class="btn-primary px-8 py-3 rounded-full text-lg font-bold shadow-lg hover:shadow-neon-purple">Request a TERR9 Demo</a>
+                </div>
+            </section>
+
+            <!-- HORUS Research Page Section -->
+            <section id="horus-research" class="py-16 bg-gray-900 px-4">
+                <div class="container mx-auto max-w-4xl text-center">
+                    <h2 class="text-4xl font-bold mb-6 gradient-text">HORUS Research: Shaping Responsible AI</h2>
+                    <div class="relative w-full h-64 md:h-96 bg-gray-800 rounded-xl shadow-xl mb-8 flex items-center justify-center overflow-hidden">
+                        <!-- Placeholder for Data visualization or ethical AI flowchart -->
+                        <img src="https://placehold.co/800x400/22223b/a667ff?text=Ethical+AI+Flowchart" alt="Ethical AI Flowchart or Data Visualization" class="w-full h-full object-cover opacity-70">
+                    </div>
+                    <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+                        HORUS Research specializes in data science and AI ethics, providing critical insights and frameworks to ensure AI is deployed responsibly and effectively across decentralized ecosystems. Our work underpins the "Serverless Trust" philosophy, ensuring AI systems uphold ethical standards regardless of their deployment model.
+                    </p>
+                    <h3 class="text-2xl font-semibold text-neon-purple mb-4">Key Focus Areas</h3>
+                    <ul class="list-disc list-inside text-gray-300 text-left mx-auto max-w-2xl space-y-2 mb-8">
+                        <li><span class="font-bold text-neon-green">Ethical AI Guidelines:</span> Developing comprehensive fairness, transparency, and accountability frameworks for decentralized AI.</li>
+                        <li><span class="font-bold text-neon-blue">Advanced Data Science:</span> Crafting predictive models and analytics for diverse AI applications, ensuring data integrity across decentralized data sources.</li>
+                        <li><span class="font-bold text-neon-purple">Industry Impact:</span> Showcasing real-world case studies in healthcare, logistics, and more, demonstrating ethical AI in action.</li>
+                    </ul>
+                    <a href="https://horus-7b81f1.webflow.io/" target="_blank" class="btn-secondary px-8 py-3 rounded-full text-lg font-bold shadow-lg hover:shadow-neon-blue">Read Our Latest Whitepaper</a>
+                </div>
+            </section>
+
+            <!-- LUX-OPUS Page Section -->
+            <section id="lux-opus" class="py-16 bg-indigo-950 px-4">
+                <div class="container mx-auto max-w-4xl text-center">
+                    <h2 class="text-4xl font-bold mb-6 gradient-text">LUX-OPUS: Engineering Light Itself</h2>
+                    <div class="relative w-full h-64 md:h-96 bg-gray-800 rounded-xl shadow-xl mb-8 flex items-center justify-center overflow-hidden">
+                        <!-- Placeholder for Animated LiDAR pulse cutting through fog/rain -->
+                        <img src="https://placehold.co/800x400/22223b/00e0ff?text=Animated+LiDAR+Pulse" alt="Animated LiDAR pulse cutting through fog/rain" class="w-full h-full object-cover opacity-70">
+                    </div>
+                    <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+                        LUX-OPUS redefines perception with proprietary LiDAR illumination that penetrates challenging environments with unmatched clarity. This technology forms a critical sensor input for decentralized AI systems, providing the reliable data foundation for Serverless Trust.
+                    </p>
+                    <h3 class="text-2xl font-semibold text-neon-blue mb-4">Key Features</h3>
+                    <ul class="list-disc list-inside text-gray-300 text-left mx-auto max-w-2xl space-y-2 mb-8">
+                        <li><span class="font-bold text-neon-green">Tailored Wavelengths:</span> Optimally penetrates fog, rain, and particulates, ensuring consistent data acquisition.</li>
+                        <li><span class="font-bold text-neon-blue">Dynamic Pulse Shaping & Modulation:</span> Enhances signal fidelity and data robustness for decentralized AI inference.</li>
+                        <li><span class="font-bold text-neon-purple">Intelligent Optics:</span> Provides surgical precision in photon guidance, enabling superior environmental sensing.</li>
+                    </ul>
+                    <h3 class="text-2xl font-semibold text-neon-blue mb-4">Applications</h3>
+                    <ul class="list-disc list-inside text-gray-300 text-left mx-auto max-w-2xl space-y-2 mb-10">
+                        <li>Autonomous vehicles operating in adverse weather conditions.</li>
+                        <li>Advanced drones for precision mapping and navigation.</li>
+                        <li>Environmental monitoring for climate and ecological research.</li>
+                    </ul>
+                    <a href="https://umdcppvx.manus.space/" target="_blank" class="btn-primary px-8 py-3 rounded-full text-lg font-bold shadow-lg hover:shadow-neon-purple">See LUX-OPUS in Action</a>
+                </div>
+            </section>
+
+            <!-- ATHENAX Page Section -->
+            <section id="athenax" class="py-16 bg-gray-900 px-4">
+                <div class="container mx-auto max-w-4xl text-center">
+                    <h2 class="text-4xl font-bold mb-6 gradient-text">ATHENAX: Neuromorphic Intelligence at the Edge</h2>
+                    <div class="relative w-full h-64 md:h-96 bg-gray-800 rounded-xl shadow-xl mb-8 flex items-center justify-center overflow-hidden">
+                        <!-- Placeholder for Animated neural processor or decision-making simulation -->
+                        <img src="https://placehold.co/800x400/22223b/ff7c43?text=Animated+Neural+Processor" alt="Animated neural processor or decision-making simulation" class="w-full h-full object-cover opacity-70">
+                    </div>
+                    <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+                        ATHENAX transforms enhanced LiDAR streams and other sensor data into instant, autonomous decisions at the edge, powered by Illex’s revolutionary neural processor. This enables true Decentralized AI, where intelligence resides and acts locally with Serverless Trust.
+                    </p>
+                    <h3 class="text-2xl font-semibold text-accent-orange mb-4">Key Features</h3>
+                    <ul class="list-disc list-inside text-gray-300 text-left mx-auto max-w-2xl space-y-2 mb-8">
+                        <li><span class="font-bold text-neon-green">Edge Inference Pipelines:</span> Fuses LiDAR, video, and diverse sensor data for real-time, on-device AI processing.</li>
+                        <li><span class="font-bold text-neon-blue">Illex.OS Integration:</span> Lightweight framework designed for efficient deployment of LLMs and Reinforcement Learning (RL) agents on decentralized edge hardware.</li>
+                        <li><span class="font-bold text-neon-purple">Self-Improving Decentralized AI:</span> Continuously adapts and optimizes from real-world feedback loops, fostering autonomous evolution with real-time observability.</li>
+                    </ul>
+                    <h3 class="text-2xl font-semibold text-accent-orange mb-4">Applications</h3>
+                    <ul class="list-disc list-inside text-gray-300 text-left mx-auto max-w-2xl space-y-2 mb-10">
+                        <li>Autonomous drones for complex navigation and data processing.</li>
+                        <li>Advanced robotics with on-board, intelligent decision-making.</li>
+                        <li>Smart infrastructure systems capable of localized, real-time responses.</li>
+                    </ul>
+                    <a href="https://illex.webflow.io/" target="_blank" class="btn-secondary px-8 py-3 rounded-full text-lg font-bold shadow-lg hover:shadow-neon-blue">Explore ATHENAX Capabilities</a>
+                </div>
+            </section>
+
+            <!-- About Us Section -->
+            <section id="about" class="py-16 bg-indigo-950 px-4">
+                <div class="container mx-auto max-w-4xl text-center">
+                    <h2 class="text-4xl font-bold mb-6 gradient-text">Coreweaver Labs: Innovating at the Intersection of AI and Perception</h2>
+                    <div class="relative w-full h-64 md:h-96 bg-gray-800 rounded-xl shadow-xl mb-8 flex items-center justify-center overflow-hidden">
+                        <!-- Placeholder for Team photo or tech visualization -->
+                        <img src="https://placehold.co/800x400/22223b/a667ff?text=Our+Team" alt="Coreweaver Labs Team" class="w-full h-full object-cover opacity-70">
+                    </div>
+                    <h3 class="text-2xl font-semibold text-neon-purple mb-4">Our Story</h3>
+                    <p class="text-lg text-gray-300 leading-relaxed mb-8">
+                        Founded to bridge advanced AI and precision optics, Coreweaver Labs is redefining how intelligent systems perceive and act in real-world environments. Our journey is driven by a commitment to Serverless Trust and Decentralized AI, pushing the boundaries of what's possible.
+                    </p>
+                    <h3 class="text-2xl font-semibold text-neon-purple mb-4">Our Values</h3>
+                    <ul class="list-disc list-inside text-gray-300 text-left mx-auto max-w-2xl space-y-2 mb-8">
+                        <li><span class="font-bold text-neon-green">Innovation:</span> Relentlessly pursuing breakthroughs in AI, neuromorphic computing, and optics.</li>
+                        <li><span class="font-bold text-neon-blue">Responsibility:</span> Building ethical and trustworthy AI systems that prioritize human well-being.</li>
+                        <li><span class="font-bold text-neon-purple">Precision:</span> Delivering meticulously engineered solutions with unmatched accuracy and reliability.</li>
+                        <li><span class="font-bold text-accent-orange">Impact:</span> Creating intelligent systems that drive significant positive change across industries.</li>
+                    </ul>
+                    <h3 class="text-2xl font-semibold text-neon-purple mb-4">Our Team</h3>
+                    <p class="text-gray-300 leading-relaxed mb-10">
+                        Our team comprises visionary AI researchers, brilliant optics engineers, and seasoned industry leaders, all united by a passion for innovation and a commitment to excellence. We foster a collaborative environment where groundbreaking ideas flourish.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                        <a href="#careers" class="btn-primary px-8 py-3 rounded-full text-lg font-bold shadow-lg hover:shadow-neon-purple">Join Our Team</a>
+                        <a href="#contact" class="btn-secondary px-8 py-3 rounded-full text-lg font-bold shadow-lg hover:shadow-neon-blue">Partner with Us</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="py-16 bg-gray-900 px-4">
+                <div class="container mx-auto max-w-3xl text-center">
+                    <h2 class="text-4xl font-bold mb-6 gradient-text">Let’s Build the Future Together</h2>
+                    <div class="relative w-full h-64 md:h-80 bg-gray-800 rounded-xl shadow-xl mb-8 flex items-center justify-center overflow-hidden">
+                        <!-- Placeholder for Futuristic cityscape or tech lab aesthetic -->
+                        <img src="https://placehold.co/800x400/22223b/00e0ff?text=Futuristic+Cityscape" alt="Futuristic cityscape or tech lab aesthetic" class="w-full h-full object-cover opacity-70">
+                    </div>
+                    <p class="text-lg text-gray-300 leading-relaxed mb-8">
+                        Whether you're looking to explore a partnership, request a demo, or simply learn more about our Serverless Trust and Decentralized AI solutions, we're here to help.
+                    </p>
+                    <form class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700">
+                        <div class="mb-4 text-left">
+                            <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Name:</label>
+                            <input type="text" id="name" name="name" class="shadow-sm appearance-none border border-gray-700 rounded w-full py-2 px-3 bg-gray-700 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-neon-blue" placeholder="Your Name">
+                        </div>
+                        <div class="mb-4 text-left">
+                            <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email:</label>
+                            <input type="email" id="email" name="email" class="shadow-sm appearance-none border border-gray-700 rounded w-full py-2 px-3 bg-gray-700 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-neon-blue" placeholder="your@example.com">
+                        </div>
+                        <div class="mb-4 text-left">
+                            <label for="company" class="block text-gray-300 text-sm font-bold mb-2">Company (Optional):</label>
+                            <input type="text" id="company" name="company" class="shadow-sm appearance-none border border-gray-700 rounded w-full py-2 px-3 bg-gray-700 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-neon-blue" placeholder="Your Company">
+                        </div>
+                        <div class="mb-4 text-left">
+                            <label for="message" class="block text-gray-300 text-sm font-bold mb-2">Message:</label>
+                            <textarea id="message" name="message" rows="5" class="shadow-sm appearance-none border border-gray-700 rounded w-full py-2 px-3 bg-gray-700 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-neon-blue" placeholder="Tell us how we can help..."></textarea>
+                        </div>
+                        <div class="mb-6 flex items-center justify-between">
+                            <label for="demo-request" class="flex items-center text-gray-300">
+                                <input type="checkbox" id="demo-request" name="demo-request" class="form-checkbox h-5 w-5 text-neon-blue rounded border-gray-600 bg-gray-700 focus:ring-neon-blue">
+                                <span class="ml-2 text-sm">Yes, I'd like to request a demo.</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn-primary px-8 py-3 rounded-full text-lg font-bold shadow-lg hover:shadow-neon-purple w-full">Submit Inquiry</button>
+                    </form>
+                    <div class="mt-8 text-gray-300">
+                        <p class="mb-2"><span class="font-bold text-neon-blue">Email:</span> info@coreweaverlabs.ai</p>
+                        <p class="mb-4"><span class="font-bold text-neon-blue">Address:</span> 123 Innovation Drive, San Francisco, CA 94107 (Fictional)</p>
+                        <div class="flex justify-center space-x-6">
+                            <a href="#" class="text-gray-400 hover:text-neon-blue transition duration-300" aria-label="LinkedIn"><svg fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+                            <a href="#" class="text-gray-400 hover:text-neon-blue transition duration-300" aria-label="Twitter"><svg fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.791-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.719 0-4.925 2.206-4.925 4.925 0 .385.04.757.112 1.111-4.091-.205-7.719-2.165-10.14-5.132-.424.729-.666 1.573-.666 2.476 0 1.708.869 3.218 2.188 4.09-.807-.026-1.566-.247-2.227-.616v.061c0 2.385 1.702 4.363 3.953 4.807-.412.111-.849.17-1.296.17-.318 0-.626-.03-.928-.086.631 1.956 2.445 3.374 4.607 3.414-1.695 1.321-3.823 2.109-6.14 2.109-.402 0-.799-.023-1.194-.069 2.193 1.399 4.792 2.219 7.583 2.219 9.167 0 14.15-7.592 14.15-14.15 0-.214-.005-.426-.014-.637.965-.699 1.804-1.57 2.479-2.559z"/></svg></a>
+                            <a href="#" class="text-gray-400 hover:text-neon-blue transition duration-300" aria-label="GitHub"><svg fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.6.111.819-.257.819-.578v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.304.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.118-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .323.218.696.823.578 4.766-1.586 8.205-6.084 8.205-11.387c0-6.627-5.373-12-12-12z"/></svg></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Blog/Resources Section -->
+            <section id="blog" class="py-16 bg-indigo-950 px-4">
+                <div class="container mx-auto text-center">
+                    <h2 class="text-4xl font-bold mb-6 gradient-text">Insights from the Frontier of AI and Optics</h2>
+                    <p class="text-lg text-gray-300 leading-relaxed mb-10">
+                        Explore our latest research, thought leadership articles, and case studies on AI, neuromorphic computing, precision optics, and Serverless Trust.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="card-bg p-6 rounded-xl shadow-lg text-left">
+                            <h3 class="text-xl font-semibold text-neon-green mb-3">The Future of Edge AI with Decentralized Training</h3>
+                            <p class="text-gray-300 text-sm mb-4">Deep dive into how decentralized training models are transforming edge AI capabilities and ensuring real-time observability.</p>
+                            <a href="#" class="text-neon-green hover:underline font-semibold text-sm">Read Article &rarr;</a>
+                        </div>
+                        <div class="card-bg p-6 rounded-xl shadow-lg text-left">
+                            <h3 class="text-xl font-semibold text-neon-blue mb-3">Ethical AI in Practice: A HORUS Research Perspective</h3>
+                            <p class="text-gray-300 text-sm mb-4">Understanding the ethical considerations and frameworks critical for responsible AI development and deployment.</p>
+                            <a href="https://horus-7b81f1.webflow.io/blog/ethical-ai-in-practice" target="_blank" class="text-neon-blue hover:underline font-semibold text-sm">Read Whitepaper &rarr;</a>
+                        </div>
+                        <div class="card-bg p-6 rounded-xl shadow-lg text-left">
+                            <h3 class="text-xl font-semibold text-neon-purple mb-3">LiDAR in Harsh Environments: LUX-OPUS Case Study</h3>
+                            <p class="text-gray-300 text-sm mb-4">Discover how our proprietary LiDAR technology performs in the most challenging conditions, ensuring Serverless Trust for perception data.</p>
+                            <a href="https://umdcppvx.manus.space/case-studies/lux-opus-harsh-environments" target="_blank" class="text-neon-purple hover:underline font-semibold text-sm">View Case Study &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="mt-12">
+                        <a href="#" class="btn-secondary px-8 py-3 rounded-full text-lg font-bold shadow-lg hover:shadow-neon-blue">Subscribe to Updates</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Careers Section -->
+            <section id="careers" class="py-16 bg-gray-900 px-4">
+                <div class="container mx-auto max-w-4xl text-center">
+                    <h2 class="text-4xl font-bold mb-6 gradient-text">Join the Future of Intelligent Systems</h2>
+                    <div class="relative w-full h-64 md:h-80 bg-gray-800 rounded-xl shadow-xl mb-8 flex items-center justify-center overflow-hidden">
+                        <!-- Placeholder for Team in a high-tech lab -->
+                        <img src="https://placehold.co/800x400/22223b/39ff14?text=Team+in+Lab" alt="Team in a high-tech lab" class="w-full h-full object-cover opacity-70">
+                    </div>
+                    <p class="text-lg text-gray-300 leading-relaxed mb-8">
+                        At Coreweaver Labs, we're building the next generation of AI and perception technologies. If you're passionate about Serverless Trust, Decentralized AI, and pushing the boundaries of innovation, we want to hear from you.
+                    </p>
+                    <h3 class="text-2xl font-semibold text-neon-green mb-4">Open Roles</h3>
+                    <ul class="list-disc list-inside text-gray-300 text-left mx-auto max-w-2xl space-y-2 mb-8">
+                        <li>AI Research Scientist (Focus on Decentralized LLMs)</li>
+                        <li>Optics Engineer (Specialization in LiDAR Systems)</li>
+                        <li>Edge Computing Specialist (Expertise in NPU Optimization)</li>
+                        <li>Blockchain Developer (for Decentralized AI Infrastructure)</li>
+                        <li>UX/UI Designer (for AI Observability Platforms)</li>
+                    </ul>
+                    <h3 class="text-2xl font-semibold text-neon-green mb-4">Benefits</h3>
+                    <p class="text-gray-300 leading-relaxed mb-10">
+                        We offer a competitive salary, unparalleled opportunities to work on cutting-edge projects, a vibrant collaborative culture, and a chance to make a real impact on the future of AI.
+                    </p>
+                    <a href="#" class="btn-primary px-8 py-3 rounded-full text-lg font-bold shadow-lg hover:shadow-neon-purple">Apply Now</a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-black text-gray-400 py-10 text-sm mt-auto border-t border-gray-800">
+            <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+                <div>
+                    <h3 class="font-bold text-xl mb-4 text-neon-blue">Coreweaver Labs</h3>
+                    <p class="leading-relaxed">Weaving intelligence into the future with Serverless Trust and Decentralized AI.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-neon-blue">Explore</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#solutions" class="hover:text-neon-blue transition duration-300">Our Solutions</a></li>
+                        <li><a href="#about" class="hover:text-neon-blue transition duration-300">About Us</a></li>
+                        <li><a href="#blog" class="hover:text-neon-blue transition duration-300">Blog & Resources</a></li>
+                        <li><a href="#careers" class="hover:text-neon-blue transition duration-300">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-neon-blue">Connect</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#contact" class="hover:text-neon-blue transition duration-300">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-neon-blue transition duration-300">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-neon-blue transition duration-300">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-neon-blue transition duration-300">LinkedIn</a></li>
+                        <li><a href="#" class="hover:text-neon-blue transition duration-300">Twitter/X</a></li>
+                        <li><a href="#" class="hover:text-neon-blue transition duration-300">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 pt-6 border-t border-gray-800 text-center text-gray-500">
+                <p>&copy; 2025 Coreweaver Labs. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for all internal anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const navHeight = document.querySelector('nav').offsetHeight;
+                        const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                        const offsetPosition = elementPosition - navHeight; // Adjust for fixed header
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                        });
+                        // Close mobile menu if open
+                        const mobileMenu = document.getElementById('mobile-menu');
+                        if (mobileMenu && mobileMenu.classList.contains('open')) {
+                            mobileMenu.classList.remove('open');
+                        }
+                    }
+                });
+            });
+
+            // Mobile menu toggle logic
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('open');
+                });
+            }
+
+            // Simple scroll-triggered animation placeholder (example for "Why Coreweaver?" section)
+            const whyCoreweaverSection = document.getElementById('why-coreweaver');
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.3 /* Trigger when 30% of the section is visible */
+            };
+
+            const sectionObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.querySelectorAll('.card-bg').forEach((card, index) => {
+                            card.style.opacity = 0;
+                            card.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                card.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+                                card.style.opacity = 1;
+                                card.style.transform = 'translateY(0)';
+                            }, index * 100); /* Stagger animation */
+                        });
+                        observer.unobserve(entry.target); // Only animate once
+                    }
+                });
+            }, observerOptions);
+
+            if (whyCoreweaverSection) {
+                sectionObserver.observe(whyCoreweaverSection);
+            }
+        });
+    </script>
+</body>
+</html>
